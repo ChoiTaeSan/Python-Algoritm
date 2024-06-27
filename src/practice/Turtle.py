@@ -44,10 +44,17 @@ for i in range(50):
     t.setheading(d)
     
     # 랜덤한 크기로 터틀 크기 설정
-    t.shapesize(random.randint(1, 5))
+    size = random.randint(1, 5)
+    t.shapesize(size)
+    
+    # 색상 채우기 시작
+    t.begin_fill()
     
     # 터틀 모양 도장 찍기
     t.stamp()
+    
+    # 색상 채우기 끝
+    t.end_fill()
 
 # 메인 루프 실행, 창이 닫히지 않도록 유지
 t.mainloop()

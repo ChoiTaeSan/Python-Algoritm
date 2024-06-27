@@ -29,10 +29,12 @@ while True:
     
     cnt = int(input('몇 개를 드릴까요? :'))
     print(f"{selected_menu_name} X {cnt} = {selected_menu_price * cnt}원입니다.")
+
     if(selectMenu.get(selected_menu_name)):
         selectMenu[selected_menu_name] += cnt
     else :
         selectMenu[selected_menu_name] = cnt
+        
     now = dt.now()
     stringNow = now.strftime('%Y-%m-%d %H:%M:%S')
     
